@@ -15,7 +15,10 @@ class CustomException(Exception):
         
         self.error_message = error_message_detail(
             error_message, error_detail=error_detail)
+        # logging.info(error_message)
+        
     def __str__(self):
+        
         return self.error_message
     
 # if __name__ == "__main__":
