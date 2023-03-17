@@ -10,6 +10,8 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTransfomationCOnfig
+from src.components.model_trainer import ModelTrainer
+from src.components.model_trainer import ModelTrainerConfig
 
 @dataclass
 class DataIngestionConfig:
@@ -33,8 +35,8 @@ class DataIngestion:
             logging.info("Train Test Split Inititated")
             train_set,test_set=train_test_split(df,test_size=0.2,random_state=43)
             
-            train_set.to_csv(self.ingestion_config.train_data_path,index=False,header=True)
-            test_set.to_csv(self.ingestion_config.test_data_path,index=False,header=True)
+            train_set.to_csv(self.ingestion_config.train_data_path,index=False,header=True) # type: ignore
+            test_set.to_csv(self.ingestion_config.test_data_path,index=False,header=True) # type: ignore
             
             logging.info("Ingestion of Data is completed")
             
@@ -48,13 +50,24 @@ class DataIngestion:
             
         except Exception as e:
             # logging.info(e)
-            raise CustomException(e,sys)
+            raise CustomException(e,sys)  # type: ignore
         
 if __name__=="__main__":
     
-    obj=DataIngestion()
-    train_data,test_data=obj.initiate_data_ingestion()
+    try:
+        
     
-    data_transformation = DataTransformation()
-    train_arr, test_arr, _ = data_transformation.initiate_data_transformation(
-        train_data, test_data)
+        obj=DataIngestion()
+        train_data,test_data=obj.initiate_data_ingestion()
+        logging.info(f"Train Data : {train_data}, Test Data : {test_data}")
+        data_transformation = DataTransformation()
+        train_arr, test_arr, preprocessor_path = data_transformation.initiate_data_transformation(
+            train_data, test_data)
+        logging.info(f"Train Array : {train_arr},Test Array : {test_arr},Preprocessor Array : {preprocessor_path}")
+        modeltrainer = ModelTrainer()
+        r2_score=modeltrainer.initiate_model_trainer(
+            train_arr, test_arr, preprocessor_path)  # type: ignore
+        logging.info(f"R2_Score : {r2_score}")
+    
+    except Exception as e:
+        raise CustomException(e,sys) # type: ignore

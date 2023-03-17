@@ -31,6 +31,7 @@ class DataTransformation:
         self.data_transformer_config=DataTransfomationCOnfig()
     
     def get_data_transformer_object(self):
+        logging.info("Entered the data transfomation method or components")
         try:
             numerical_columns = ["writing_score", "reading_score"]
             categorical_columns = [
@@ -137,7 +138,7 @@ class DataTransformation:
 
             )
             
-            logging.info(f"Saved preprocessing object.")
+            logging.info(f"Saved preprocessing object as Pickle File.")
             
             return (
                 train_arr,
