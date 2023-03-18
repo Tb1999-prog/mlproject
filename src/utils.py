@@ -12,7 +12,7 @@ from src.logger import logging
 
 
 def save_object(file_path, obj):
-    logging.info("Saving object {obj} on file: {file_path} Started.")
+    logging.info(f"Saving object {obj} on file: {file_path} Started.")
     try:
         dir_path = os.path.dirname(file_path)
         logging.info(f"Making Directory :{dir_path}")
@@ -21,8 +21,9 @@ def save_object(file_path, obj):
         logging.info(f"Dumping object : {obj}")
         with open(file_path, "wb") as file_obj:
             dill.dump(obj, file_obj)
+            logging.info(f"Dumping of obj {obj} Successfull {file_obj}")
             
-        logging.info(f"Dumping of obj {obj} Successfull {file_obj}")
+        
 
     except Exception as e:
         raise CustomException(e, sys) # type: ignore
@@ -70,3 +71,18 @@ def evaluate_model(X_train, y_train, X_test, y_test, models,param):
     except Exception as e:
         raise CustomException(e, sys) # type: ignore
 
+
+def load_object(file_path):
+    logging.info("Loading Object from {}".format(file_path))
+    try:
+        
+        with open(file_path,'rb') as pkl:
+            obj=dill.load(pkl)
+            logging.info("Object {} loaded from {} Scucessfully".format(obj, file_path))
+            return obj
+             
+            
+        
+        
+    except Exception as e:
+        raise CustomException(e,sys) # type: ignore
