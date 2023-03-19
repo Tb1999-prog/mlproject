@@ -1,5 +1,0 @@
-[ 2023-03-17 18:05:40,095 ] 24 root - INFO - Entered the data ingestion method or components
-[ 2023-03-17 18:05:40,101 ] 27 root - INFO - Exported Read The Dataset as DataFrame
-[ 2023-03-17 18:05:40,109 ] 33 root - INFO - Train Test Split Inititated
-[ 2023-03-17 18:05:40,120 ] 39 root - INFO - Ingestion of Data is completed
-[ 2023-03-17 18:05:40,120 ] 18 root - INFO - name 'test_data' is not defined

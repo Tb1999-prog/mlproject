@@ -1,4 +1,0 @@
-[ 2023-03-16 13:01:47,096 ] 22 root - INFO - Entered the data ingestion method or components
-[ 2023-03-16 13:01:47,102 ] 25 root - INFO - Exported Read The Dataset as DataFrame
-[ 2023-03-16 13:01:47,110 ] 31 root - INFO - Train Test Split Inititated
-[ 2023-03-16 13:01:47,118 ] 18 root - INFO - 'DataIngestion' object has no attribute 'ingestion_cofnfig'
