@@ -1,0 +1,22 @@
+[ 2023-03-18 21:43:41,447 ] 28 root - INFO - Reading Custom Data
+[ 2023-03-18 21:43:41,447 ] 19 root - INFO - Model Path: artifact\model.pkl
+[ 2023-03-18 21:43:41,447 ] 23 root - INFO - Preprocessor Path: artifact\preprocessor.pkl
+[ 2023-03-18 21:43:41,447 ] 76 root - INFO - Loading Object from artifact\model.pkl
+[ 2023-03-18 21:43:41,448 ] 81 root - INFO - Object LinearRegression() loaded from artifact\model.pkl
+[ 2023-03-18 21:43:41,449 ] 76 root - INFO - Loading Object from artifact\preprocessor.pkl
+[ 2023-03-18 21:43:41,465 ] 81 root - INFO - Object ColumnTransformer(transformers=[('num_pipeline',
+                                 Pipeline(steps=[('imputer',
+                                                  SimpleImputer(strategy='median')),
+                                                 ('scaler',
+                                                  StandardScaler(with_mean=False))]),
+                                 ['writing_score', 'reading_score']),
+                                ('cat_pipeline',
+                                 Pipeline(steps=[('imputer',
+                                                  SimpleImputer(strategy='most_frequent')),
+                                                 ('one_hot_encoder',
+                                                  OneHotEncoder()),
+                                                 ('scaler',
+                                                  StandardScaler(with_mean=False))]),
+                                 ['gender', 'race_ethnicity',
+                                  'parental_level_of_education', 'lunch',
+                                  'test_preparation_course'])]) loaded from artifact\preprocessor.pkl

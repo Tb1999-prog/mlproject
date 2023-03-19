@@ -1,0 +1,19 @@
+[ 2023-03-18 22:08:36,619 ] 44 root - INFO - Reading Custom Data
+[ 2023-03-18 22:08:36,626 ] 224 werkzeug - WARNING -  * Debugger is active!
+[ 2023-03-18 22:08:36,632 ] 224 werkzeug - INFO -  * Debugger PIN: 979-828-584
+[ 2023-03-18 22:08:38,383 ] 224 werkzeug - INFO - 127.0.0.1 - - [18/Mar/2023 22:08:38] "GET / HTTP/1.1" 200 -
+[ 2023-03-18 22:08:38,415 ] 224 werkzeug - INFO - 127.0.0.1 - - [18/Mar/2023 22:08:38] "[35m[1mGET //predictdata HTTP/1.1[0m" 500 -
+[ 2023-03-18 22:08:45,662 ] 224 werkzeug - INFO - 127.0.0.1 - - [18/Mar/2023 22:08:45] "[33mGET /predict_datapoints HTTP/1.1[0m" 404 -
+[ 2023-03-18 22:08:45,766 ] 224 werkzeug - INFO - 127.0.0.1 - - [18/Mar/2023 22:08:45] "[33mGET /predict_datapoints HTTP/1.1[0m" 404 -
+[ 2023-03-18 22:08:50,199 ] 224 werkzeug - INFO - 127.0.0.1 - - [18/Mar/2023 22:08:50] "[33mGET /predict_datapoint HTTP/1.1[0m" 404 -
+[ 2023-03-18 22:08:50,309 ] 224 werkzeug - INFO - 127.0.0.1 - - [18/Mar/2023 22:08:50] "[33mGET /predict_datapoint HTTP/1.1[0m" 404 -
+[ 2023-03-18 22:08:57,325 ] 224 werkzeug - INFO - 127.0.0.1 - - [18/Mar/2023 22:08:57] "GET / HTTP/1.1" 200 -
+[ 2023-03-18 22:08:57,434 ] 224 werkzeug - INFO - 127.0.0.1 - - [18/Mar/2023 22:08:57] "GET / HTTP/1.1" 200 -
+[ 2023-03-18 22:09:37,958 ] 224 werkzeug - INFO - 127.0.0.1 - - [18/Mar/2023 22:09:37] "[35m[1mGET /predictdata HTTP/1.1[0m" 500 -
+[ 2023-03-18 22:09:38,004 ] 224 werkzeug - INFO - 127.0.0.1 - - [18/Mar/2023 22:09:38] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[ 2023-03-18 22:09:38,010 ] 224 werkzeug - INFO - 127.0.0.1 - - [18/Mar/2023 22:09:38] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[ 2023-03-18 22:09:38,123 ] 224 werkzeug - INFO - 127.0.0.1 - - [18/Mar/2023 22:09:38] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2023-03-18 22:09:38,186 ] 224 werkzeug - INFO - 127.0.0.1 - - [18/Mar/2023 22:09:38] "[35m[1mGET /predictdata HTTP/1.1[0m" 500 -
+[ 2023-03-18 22:10:22,630 ] 224 werkzeug - INFO - 127.0.0.1 - - [18/Mar/2023 22:10:22] "[33mGET /predictdatapoints HTTP/1.1[0m" 404 -
+[ 2023-03-18 22:10:22,767 ] 224 werkzeug - INFO - 127.0.0.1 - - [18/Mar/2023 22:10:22] "[33mGET /predictdatapoints HTTP/1.1[0m" 404 -
+[ 2023-03-18 22:10:33,456 ] 224 werkzeug - INFO -  * Detected change in 'D:\\mlproject\\app.py', reloading

@@ -1,0 +1,3 @@
+[ 2023-03-18 21:27:36,426 ] 24 root - INFO - Reading Custom Data
+[ 2023-03-18 21:27:36,426 ] 19 root - INFO - Model Path: artifact\model.pkl
+[ 2023-03-18 21:27:36,426 ] 22 root - INFO - Preprocessor Path: artifact\preprocessor.pkl

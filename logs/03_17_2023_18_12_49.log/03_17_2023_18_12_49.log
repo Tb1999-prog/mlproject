@@ -1,0 +1,34 @@
+[ 2023-03-17 18:12:50,769 ] 24 root - INFO - Entered the data ingestion method or components
+[ 2023-03-17 18:12:50,774 ] 27 root - INFO - Exported Read The Dataset as DataFrame
+[ 2023-03-17 18:12:50,782 ] 33 root - INFO - Train Test Split Inititated
+[ 2023-03-17 18:12:50,792 ] 39 root - INFO - Ingestion of Data is completed
+[ 2023-03-17 18:12:50,799 ] 84 root - INFO - Read train and test data completed
+[ 2023-03-17 18:12:50,799 ] 86 root - INFO - Obtaining preprocessing object
+[ 2023-03-17 18:12:50,799 ] 43 root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[ 2023-03-17 18:12:50,800 ] 44 root - INFO - Numerical columns: ['writing_score', 'reading_score']
+[ 2023-03-17 18:12:50,803 ] 60 root - INFO - Categorical Pipeline: Pipeline(steps=[('imputer', SimpleImputer(strategy='most_frequent')),
+                ('one_hot_encoder', OneHotEncoder()),
+                ('scaler', StandardScaler())])
+[ 2023-03-17 18:12:50,804 ] 61 root - INFO - Numerical Pipline: Pipeline(steps=[('imputer', SimpleImputer(strategy='median')),
+                ('scaler', StandardScaler())])
+[ 2023-03-17 18:12:50,804 ] 70 root - INFO - Categorical Pipline &Numerical Pipeline Excueted Scuceesully
+[ 2023-03-17 18:12:50,814 ] 71 root - INFO - Preprocesssor is returned ColumnTransformer(transformers=[('num_pipeline',
+                                 Pipeline(steps=[('imputer',
+                                                  SimpleImputer(strategy='median')),
+                                                 ('scaler', StandardScaler())]),
+                                 ['writing_score', 'reading_score']),
+                                ('cat_pipeline',
+                                 Pipeline(steps=[('imputer',
+                                                  SimpleImputer(strategy='most_frequent')),
+                                                 ('one_hot_encoder',
+                                                  OneHotEncoder()),
+                                                 ('scaler', StandardScaler())]),
+                                 ['gender', 'race_ethnicity',
+                                  'parental_level_of_education', 'lunch',
+                                  'test_preparation_course'])])
+[ 2023-03-17 18:12:50,814 ] 102 root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[ 2023-03-17 18:12:50,814 ] 103 root - INFO - Numerical columns: ['writing_score', 'reading_score']
+[ 2023-03-17 18:12:50,814 ] 104 root - INFO - Target columns: math_score
+[ 2023-03-17 18:12:50,814 ] 106 root - INFO - Removing Target Columns from Train and Test Set
+[ 2023-03-17 18:12:50,815 ] 115 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2023-03-17 18:12:50,826 ] 18 root - INFO - Cannot center sparse matrices: pass `with_mean=False` instead. See docstring for motivation and alternatives.

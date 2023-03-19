@@ -1,0 +1,108 @@
+[ 2023-03-18 13:20:35,304 ] 26 root - INFO - Entered the data ingestion method or components
+[ 2023-03-18 13:20:35,314 ] 29 root - INFO - Exported Read The Dataset as DataFrame
+[ 2023-03-18 13:20:35,322 ] 35 root - INFO - Train Test Split Inititated
+[ 2023-03-18 13:20:35,334 ] 41 root - INFO - Ingestion of Data is completed
+[ 2023-03-18 13:20:35,335 ] 62 root - INFO - Train Data : artifact\train.csv, Test Data : artifact\test.csv
+[ 2023-03-18 13:20:35,345 ] 85 root - INFO - Read train and test data completed
+[ 2023-03-18 13:20:35,346 ] 87 root - INFO - Obtaining preprocessing object
+[ 2023-03-18 13:20:35,347 ] 34 root - INFO - Entered the data transfomation method or components
+[ 2023-03-18 13:20:35,347 ] 44 root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[ 2023-03-18 13:20:35,431 ] 45 root - INFO - Numerical columns: ['writing_score', 'reading_score']
+[ 2023-03-18 13:20:35,432 ] 61 root - INFO - Categorical Pipeline: Pipeline(steps=[('imputer', SimpleImputer(strategy='most_frequent')),
+                ('one_hot_encoder', OneHotEncoder()),
+                ('scaler', StandardScaler(with_mean=False))])
+[ 2023-03-18 13:20:35,434 ] 62 root - INFO - Numerical Pipline: Pipeline(steps=[('imputer', SimpleImputer(strategy='median')),
+                ('scaler', StandardScaler(with_mean=False))])
+[ 2023-03-18 13:20:35,434 ] 71 root - INFO - Categorical Pipline &Numerical Pipeline Excueted Scuceesully
+[ 2023-03-18 13:20:35,445 ] 72 root - INFO - Preprocesssor is returned ColumnTransformer(transformers=[('num_pipeline',
+                                 Pipeline(steps=[('imputer',
+                                                  SimpleImputer(strategy='median')),
+                                                 ('scaler',
+                                                  StandardScaler(with_mean=False))]),
+                                 ['writing_score', 'reading_score']),
+                                ('cat_pipeline',
+                                 Pipeline(steps=[('imputer',
+                                                  SimpleImputer(strategy='most_frequent')),
+                                                 ('one_hot_encoder',
+                                                  OneHotEncoder()),
+                                                 ('scaler',
+                                                  StandardScaler(with_mean=False))]),
+                                 ['gender', 'race_ethnicity',
+                                  'parental_level_of_education', 'lunch',
+                                  'test_preparation_course'])])
+[ 2023-03-18 13:20:35,445 ] 103 root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[ 2023-03-18 13:20:35,445 ] 104 root - INFO - Numerical columns: ['writing_score', 'reading_score']
+[ 2023-03-18 13:20:35,446 ] 105 root - INFO - Target columns: math_score
+[ 2023-03-18 13:20:35,447 ] 107 root - INFO - Removing Target Columns from Train and Test Set
+[ 2023-03-18 13:20:35,449 ] 116 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2023-03-18 13:20:35,468 ] 131 root - INFO - Data Transformation Complted.
+[ 2023-03-18 13:20:35,468 ] 15 root - INFO - Saving object {obj} on file: {file_path} Started.
+[ 2023-03-18 13:20:35,468 ] 18 root - INFO - Making Directory :artifact
+[ 2023-03-18 13:20:35,468 ] 20 root - INFO - Directory Made
+[ 2023-03-18 13:20:35,481 ] 21 root - INFO - Dumping object : ColumnTransformer(transformers=[('num_pipeline',
+                                 Pipeline(steps=[('imputer',
+                                                  SimpleImputer(strategy='median')),
+                                                 ('scaler',
+                                                  StandardScaler(with_mean=False))]),
+                                 ['writing_score', 'reading_score']),
+                                ('cat_pipeline',
+                                 Pipeline(steps=[('imputer',
+                                                  SimpleImputer(strategy='most_frequent')),
+                                                 ('one_hot_encoder',
+                                                  OneHotEncoder()),
+                                                 ('scaler',
+                                                  StandardScaler(with_mean=False))]),
+                                 ['gender', 'race_ethnicity',
+                                  'parental_level_of_education', 'lunch',
+                                  'test_preparation_course'])])
+[ 2023-03-18 13:20:35,500 ] 25 root - INFO - Dumping of obj ColumnTransformer(transformers=[('num_pipeline',
+                                 Pipeline(steps=[('imputer',
+                                                  SimpleImputer(strategy='median')),
+                                                 ('scaler',
+                                                  StandardScaler(with_mean=False))]),
+                                 ['writing_score', 'reading_score']),
+                                ('cat_pipeline',
+                                 Pipeline(steps=[('imputer',
+                                                  SimpleImputer(strategy='most_frequent')),
+                                                 ('one_hot_encoder',
+                                                  OneHotEncoder()),
+                                                 ('scaler',
+                                                  StandardScaler(with_mean=False))]),
+                                 ['gender', 'race_ethnicity',
+                                  'parental_level_of_education', 'lunch',
+                                  'test_preparation_course'])]) Successfull <_io.BufferedWriter name='artifact\\preprocessor.pkl'>
+[ 2023-03-18 13:20:35,500 ] 141 root - INFO - Saved preprocessing object as Pickle File.
+[ 2023-03-18 13:20:35,501 ] 66 root - INFO - Train Array : [[ 4.30533129  4.62062258  0.         ...  0.          2.09830697
+  73.        ]
+ [ 4.37056358  4.75652325  2.0025047  ...  0.          2.09830697
+  58.        ]
+ [ 2.80498857  3.12571528  0.         ...  0.          2.09830697
+  55.        ]
+ ...
+ [ 4.56626046  4.96037424  2.0025047  ...  0.          2.09830697
+  62.        ]
+ [ 5.47951255  5.36807623  2.0025047  ...  2.09830697  0.
+  67.        ]
+ [ 3.71824066  4.34882125  0.         ...  0.          2.09830697
+  73.        ]],Test Array : [[ 3.00068544  3.32956627  0.         ...  2.09830697  0.
+  52.        ]
+ [ 3.32684691  4.00906959  2.0025047  ...  0.          2.09830697
+  40.        ]
+ [ 4.56626046  4.68857291  2.0025047  ...  0.          2.09830697
+  65.        ]
+ ...
+ [ 5.21858338  5.23217557  0.         ...  2.09830697  0.
+  78.        ]
+ [ 3.78347295  3.66931793  2.0025047  ...  2.09830697  0.
+  46.        ]
+ [ 4.1748667   3.94111926  2.0025047  ...  2.09830697  0.
+  57.        ]],Preprocessor Array : artifact\preprocessor.pkl
+[ 2023-03-18 13:20:35,501 ] 39 root - INFO - Entered the Model Traineer method or components
+[ 2023-03-18 13:20:35,501 ] 41 root - INFO - Split training and test input data
+[ 2023-03-18 13:20:35,501 ] 31 root - INFO - Evaluting Model Started
+[ 2023-03-18 13:20:35,502 ] 39 root - INFO - Evaluting Model: RandomForestRegressor() on Params; {'n_estimators': [8, 16, 32, 64, 128, 256]}
+[ 2023-03-18 13:20:35,502 ] 43 root - INFO - GridSearchCV(cv=3, estimator=RandomForestRegressor(),
+             param_grid={'n_estimators': [8, 16, 32, 64, 128, 256]})
+[ 2023-03-18 13:20:35,503 ] 18 root - INFO - 'GridSearchCV' object has no attribute 'fit'
+[ 2023-03-18 13:20:35,503 ] 18 root - INFO - Error Occured in Python Script name [d:\mlproject\src\utils.py] line numer [44] error message ['GridSearchCV' object has no attribute 'fit']
+[ 2023-03-18 13:20:35,503 ] 18 root - INFO - Error Occured in Python Script name [d:\mlproject\src\components\model_trainer.py] line numer [100] error message [Error Occured in Python Script name [d:\mlproject\src\utils.py] line numer [44] error message ['GridSearchCV' object has no attribute 'fit']]
